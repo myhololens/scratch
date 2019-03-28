@@ -1,0 +1,10 @@
+@import "../../css/colors.css";
+
+.share-button:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+.share-button-is-shared {
+    background: $ui-black-transparent;
+    cursor: default;
+}
