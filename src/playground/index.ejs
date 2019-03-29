@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<script src="static/whammy.js"></script>
+<script src="static/plugin.js"></script>
 <script>
 
-    window.plugin = {
-        video: new Whammy.Video(),
-        // audio: new Whammy.Audio(),
+    window.interface = {
+        save: '/project/save',
+        push: '/project/push',
+        edit: '/project/edit',
     }
 
-    window.interface = {
-        save: '/save',
-        push: '/push',
-        edit: '/edit',
+    window.plugin = {
+        
     }
 
 </script>
@@ -20,7 +19,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="google" value="notranslate">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="static/favicon.ico">
 <link rel="stylesheet" href="static/nprogress.css">
 <% if (htmlWebpackPlugin.options.sentryConfig) { %>
