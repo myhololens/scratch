@@ -162,8 +162,8 @@ class MenuBar extends React.Component {
             'handleSaveToCloud',
             'restoreOptionMessage'
         ]);
+
         this.state = {
-            blob: null,
             nickname: localStorage['nickname'],
         };
     }
