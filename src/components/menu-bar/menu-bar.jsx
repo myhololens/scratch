@@ -258,7 +258,7 @@ class MenuBar extends React.Component {
                     form.append('id', qs.search['id'])
                 }
 
-                fetch({ url: '/project/save', body: form, method: 'FORM' }).then(res => {
+                fetch({ url: '/api/project/save', body: form, method: 'FORM' }).then(res => {
                     if (res) {
                         alert('保存成功')
                     }
