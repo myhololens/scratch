@@ -75,7 +75,7 @@ class GUIEchoDisplay extends React.Component {
             if (Object.keys(qs.search).length) {
                 fetch({ url: '/project/get', body: qs.search }).then(res => {
                     if (res) {
-                        fetch({ url: res.url_sb3, resp: 'blob' }).then(sb3 => {
+                        fetch({ url: res.url_sb3, resp: 'blob', method: 'GET' }).then(sb3 => {
                             this.handleChange({
                                 target: {
                                     files: [Object.assign(sb3, res)]
