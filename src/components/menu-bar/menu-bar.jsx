@@ -689,6 +689,7 @@ class MenuBar extends React.Component {
                                                         <img
                                                             className={styles.profileIcon}
                                                             src={profileIcon}
+                                                            // src="https://avatars1.githubusercontent.com/u/13360235?s=40&v=4"
                                                         />
                                                         <span>
                                                             {this.state.nickname}
