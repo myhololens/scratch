@@ -415,3 +415,24 @@ var Whammy = (function(){
 		// expose methods of madness
 	}
 })()
+
+if (navigator.userAgent.match(/Chrome/) == null) {
+	alert('为了更好的体验，请务必使用谷歌浏览器 :)')
+}
+
+window.plugin = {
+	start() {
+		window._capture = true
+		window._audio = new Blob()
+		window._video = new Whammy.Video()
+		navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+			window._audioRecorder = new MediaRecorder(stream)
+			window._audioRecorder.start()
+			window._audioRecorder.ondataavailable = e => window._audio = e.data
+		})
+	},
+	stop() {
+		window._capture = false
+		window._audioRecorder.stop()
+	},
+}
