@@ -249,16 +249,10 @@ class MenuBar extends React.Component {
     }
     handleSaveToCloud (projectFilename, projectFilepromise) {
         return () => {
-            projectFilepromise.then(blob => {
+            projectFilepromise.then(sb3 => {
                 let form = new FormData()
                     form.append('name', projectFilename)
-                    form.append('blob', blob)
-
-                fetch({ url: window.interface.save, body: form, method: 'FORM' }).then(res => {
-                    if (res) {
-                        alert('保存成功')
-                    }
-                })
+                    form.append('sb3', sb3)
             })
         }
     }
