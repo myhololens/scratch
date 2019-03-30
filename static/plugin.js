@@ -416,8 +416,8 @@ var Whammy = (function(){
 	}
 })()
 
-if (navigator.userAgent.match(/Chrome/) == null) {
-	alert('为了更好的体验，请务必使用谷歌浏览器 :)')
+if (navigator.userAgent.match(/Chrome/) === null) {
+	alert('为了更好的在线体验，请务必使用谷歌浏览器操作 :)')
 }
 
 window.plugin = {
