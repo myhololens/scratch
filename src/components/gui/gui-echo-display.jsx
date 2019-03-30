@@ -73,7 +73,17 @@ class GUIEchoDisplay extends React.Component {
 
         if (this.props.loadingState === 'SHOWING_WITHOUT_ID' && prevProps.loadingState === 'LOADING_VM_NEW_DEFAULT') {
             if (Object.keys(qs.search).length) {
-                console.log(111)
+                fetch({ url: '/project/get', body: qs.search }).then(form => {
+                    if (form) {
+                        fetch({ url: form.url_sb3, resp: 'blob' }).then(sb3 => {
+                            this.handleChange({
+                                target: {
+                                    files: [Object.assign(sb3, form)]
+                                }
+                            })
+                        })
+                    }
+                })
             }
         }
     }
