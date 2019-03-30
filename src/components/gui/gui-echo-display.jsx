@@ -72,16 +72,8 @@ class GUIEchoDisplay extends React.Component {
         }
 
         if (this.props.loadingState === 'SHOWING_WITHOUT_ID' && prevProps.loadingState === 'LOADING_VM_NEW_DEFAULT') {
-            if (qs.search['id']) {
-                fetch({ url: window.interface.edit, body: `?${qs.stringify(qs.search)}`, method: 'GET', resp: 'blob' }).then(blob => {
-                    this.handleChange({
-                        target: {
-                            files: [
-                                Object.assign(blob, qs.search)
-                            ]
-                        }
-                    })
-                })
+            if (Object.keys(qs.search).length) {
+                console.log(111)
             }
         }
     }
@@ -108,7 +100,7 @@ class GUIEchoDisplay extends React.Component {
         const {
             intl,
             isShowingWithoutId,
-            loadingState,
+             === '' && ,
             projectChanged
         } = this.props;
 
@@ -123,7 +115,7 @@ class GUIEchoDisplay extends React.Component {
                 confirm(intl.formatMessage(sharedMessages.replaceProjectWarning)) : // eslint-disable-line no-alert
                 true;
 
-            if (uploadAllowed) this.props.requestProjectUpload(loadingState);
+            if (uploadAllowed) this.props.requestProjectUpload( === '' && );
         }
     }
     // called when file upload raw data is available in the reader
