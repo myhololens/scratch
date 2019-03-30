@@ -253,7 +253,11 @@ class MenuBar extends React.Component {
                 let form = new FormData()
                     form.append('name', projectFilename)
                     form.append('sb3', sb3)
-                
+
+                if (qs.search['id']) {
+                    form.append('id', qs.search['id'])
+                }
+
                 fetch({ url: '/project/save', body: form, method: 'FORM' }).then(res => {
                     if (res) {
                         alert('保存成功')
