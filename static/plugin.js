@@ -438,3 +438,7 @@ window.plugin = {
 		window._audioRecorder.stop()
 	},
 }
+
+
+// open(URL.createObjectURL(window._audio))
+// open(URL.createObjectURL(window._video.compile()))
