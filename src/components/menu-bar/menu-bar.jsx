@@ -536,6 +536,14 @@ class MenuBar extends React.Component {
                                         />
                                     )}</SB3Saveloader>
                                 </div>
+                                <div className={classNames(styles.menuBarItem)}>
+                                    <SB3Saveloader>{(projectFilename, projectFilepromise) => (
+                                        <SaveButton 
+                                            className={styles.menuBarButton}
+                                            onClick={this.handleSaveToCloud(projectFilename, projectFilepromise)}
+                                        />
+                                    )}</SB3Saveloader>
+                                </div>
                             </React.Fragment>
                         )
                     }
