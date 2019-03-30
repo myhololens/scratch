@@ -100,7 +100,7 @@ class GUIEchoDisplay extends React.Component {
         const {
             intl,
             isShowingWithoutId,
-             === '' && ,
+            loadingState,
             projectChanged
         } = this.props;
 
@@ -115,7 +115,7 @@ class GUIEchoDisplay extends React.Component {
                 confirm(intl.formatMessage(sharedMessages.replaceProjectWarning)) : // eslint-disable-line no-alert
                 true;
 
-            if (uploadAllowed) this.props.requestProjectUpload( === '' && );
+            if (uploadAllowed) this.props.requestProjectUpload(loadingState);
         }
     }
     // called when file upload raw data is available in the reader
