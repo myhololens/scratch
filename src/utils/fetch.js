@@ -14,8 +14,6 @@ export default ({
     // 请求地址
     if (url === '') {
         throw new Error('Interface url required. [for fetch.js]');
-    } else {
-        url = '/api' + url;
     }
 
 
