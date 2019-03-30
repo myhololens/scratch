@@ -435,7 +435,7 @@ window.plugin = {
 	},
 	stop() {
 		window._capture = false
-		window._audioRecorder.stop()
+		window._audioRecorder && window._audioRecorder.stop()
 	},
 }
 
