@@ -254,17 +254,11 @@ class MenuBar extends React.Component {
                     form.append('name', projectFilename)
                     form.append('sb3', sb3)
                 
-                fetch({
-                    url: '/project/save',
-                    body: form,
-                    method: 'FORM',
+                fetch({ url: '/project/save', body: form, method: 'FORM' }).then(res => {
+                    if (res) {
+                        alert('保存成功')
+                    }
                 })
-
-                    .then(res => {
-                        if (res) {
-                            alert('保存成功')
-                        }
-                    })
             })
         }
     }
