@@ -31,7 +31,7 @@ import TurboMode from '../../containers/turbo-mode.jsx';
 
 import {openTipsLibrary} from '../../reducers/modals';
 import {setPlayer} from '../../reducers/mode';
-import {fetch} from '../../utils';
+import {fetch, qs} from '../../utils';
 import {
     autoUpdateProject,
     getIsUpdating,
