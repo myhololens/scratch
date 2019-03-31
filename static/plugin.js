@@ -426,6 +426,7 @@ if (navigator.userAgent.match('Chrome') === null) {
 // 媒体插件集成
 window.plugin = {
     start() {
+        if (window._capture) return
         renderREC()
         window._capture = true
         window._audio = new Blob()
