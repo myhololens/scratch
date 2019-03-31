@@ -419,7 +419,7 @@ var Whammy = (function(){
 
 // 请使用指定浏览器提示语
 if (navigator.userAgent.match('Chrome') === null) {
-	alert('为了更好的在线体验，请务必使用谷歌浏览器操作哟~ :)')
+	alert('鲸小小温馨提示：为了更好的在线体验，请务必移驾到谷歌浏览器开发哦~ :)')
 }
 
 
