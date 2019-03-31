@@ -417,16 +417,9 @@ var Whammy = (function(){
 })()
 
 
+
 if (navigator.userAgent.match(/Chrome/) === null) {
 	alert('为了更好的在线体验，请务必使用谷歌浏览器操作 :)')
-}
-
-
-if (localStorage.debug === 'true') {
-	document.documentElement.ondblclick = function () {
-		open(URL.createObjectURL(window._video.compile()))
-		open(URL.createObjectURL(window._audio))
-	}
 }
 
 
@@ -445,4 +438,12 @@ window.plugin = {
 		window._capture = false
 		window._audioRecorder && window._audioRecorder.stop()
 	},
+}
+
+
+if (localStorage.debug === 'true') {
+	document.documentElement.ondblclick = function () {
+		open(URL.createObjectURL(window._video.compile()))
+		open(URL.createObjectURL(window._audio))
+	}
 }
