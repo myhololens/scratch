@@ -19,7 +19,7 @@ const ShareButton = ({
         )}
         onClick={onClick}
     >
-        发布
+        录制
     </Button>
 );
 
