@@ -24,7 +24,7 @@
 .rec-wrapper img {
     width: 22px;
     margin: 0 0 0 4px;
-    transform: translateY(1px);    
+    transform: translateY(1px);
 }
 
 .rec-wrapper::before {
@@ -35,5 +35,6 @@
     background: red;
     border-radius: 50%;
     box-shadow: 0 0 5px red;
+    transform: translateY(1px);
     animation: opacity 1.5s infinite;
 }
