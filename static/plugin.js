@@ -472,3 +472,33 @@ function destroyREC() {
     var node = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
 		node.removeChild(node.children[0])
 }
+
+
+// 渲染 VIEW dom
+function renderVIEW() {
+    var el = document.createElement('div')
+        el.innerHTML = `
+            <div class="view-mask">
+                <div class="view-wrapper">
+                    <div class="header">录制完成</div>
+                    <div class="body">
+                        <video class="body-video" src="https://mv01.jiaoliuqu.com/o_1d44evdr4ibp1sbugc53011pfia.mp4" />
+                        <audio class="body-audio" src="https://mv01.jiaoliuqu.com/o_1d44evdr4ibp1sbugc53011pfia.mp4" />
+                    </div>
+                    <div class="footer">
+                        <span>放弃</span>
+                        <span>发布</span>
+                    </div>
+                </div>
+            </div>
+        `
+    var node = document.querySelector('body')
+        node.insertBefore(el.children[0], node.children[0])
+}
+
+
+// 移除 VIEW dom
+function destroyVIEW() {
+    var node = document.querySelector('body')
+        node.removeChild(node.children[0])
+}
