@@ -442,6 +442,7 @@ window.plugin = {
 }
 
 
+// 插件调试
 document.documentElement.ondblclick = function () {
 	if (localStorage.debug === 'true') {
 		open(URL.createObjectURL(window._video.compile()))
