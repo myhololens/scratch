@@ -21,6 +21,12 @@
     cursor: pointer;
 }
 
+.rec-wrapper img {
+    width: 20px;
+    margin: 0 0 0 8px;
+    transform: translateY(1px);    
+}
+
 .rec-wrapper::before {
     content: "";
     width: 10px;

@@ -417,13 +417,13 @@ var Whammy = (function(){
 })()
 
 
-// 提示使用指定浏览器
+// 使用指定浏览器提示
 if (navigator.userAgent.match('Chrome') === null) {
 	alert('为了更好的在线体验，请务必使用谷歌浏览器操作 :)')
 }
 
 
-// 插件集成
+// 媒体插件集成
 window.plugin = {
 	start() {
 		window._capture = true
@@ -442,7 +442,7 @@ window.plugin = {
 }
 
 
-// 插件调试
+// 媒体插件调试
 document.documentElement.ondblclick = function () {
 	if (localStorage.debug === 'true') {
 		open(URL.createObjectURL(window._video.compile()))
@@ -451,22 +451,22 @@ document.documentElement.ondblclick = function () {
 }
 
 
-// 渲染 REC
+// 渲染 REC dom
 function renderREC() {
-    var node = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
-        node.style.position = 'relative'
-    var el = document.createElement('div')
-        el.innerHTML = `
+	var el = document.createElement('div')
+		el.innerHTML = `
 			<div class="rec-wrapper">
-				REC
+				REC <img src="" />
 			</div>
 		`
-    node.insertBefore(el.children[0], node.children[0])
+	var node = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
+		node.style.position = 'relative'
+		node.insertBefore(el.children[0], node.children[0])
 }
 
 
-// 移除 REC
+// 移除 REC dom
 function destroyREC() {
     var node = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
-        node.removeChild(node.children[0])
+		node.removeChild(node.children[0])
 }
