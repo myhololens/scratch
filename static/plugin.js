@@ -500,6 +500,6 @@ function renderVIEW() {
 
 // 移除 VIEW dom
 function destroyVIEW() {
-    var node = document.querySelector('body')
-        node.removeChild(node.children[0])
+    var parentNode = document.querySelector('body')
+        parentNode.removeChild(el.children[0])
 }
