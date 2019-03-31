@@ -471,7 +471,7 @@ function renderREC() {
 // 移除 REC dom
 function destroyREC() {
     var parentNode = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
-        parentNode.removeChild(el.children[0])
+        parentNode.removeChild(parentNode.children[0])
 }
 
 
@@ -502,5 +502,5 @@ function renderVIEW() {
 // 移除 VIEW dom
 function destroyVIEW() {
     var parentNode = document.querySelector('body')
-        parentNode.removeChild(el.children[0])
+        parentNode.removeChild(parentNode.children[0])
 }
