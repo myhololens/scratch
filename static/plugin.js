@@ -440,8 +440,8 @@ window.plugin = {
 }
 
 
-if (localStorage.debug === 'true') {
-	document.documentElement.ondblclick = function () {
+document.documentElement.ondblclick = function () {
+	if (localStorage.debug === 'true') {
 		open(URL.createObjectURL(window._video.compile()))
 		open(URL.createObjectURL(window._audio))
 	}
