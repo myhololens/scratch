@@ -417,11 +417,13 @@ var Whammy = (function(){
 })()
 
 
-if (navigator.userAgent.match(/Chrome/) === null) {
+// 提示使用指定浏览器
+if (navigator.userAgent.match('Chrome') === null) {
 	alert('为了更好的在线体验，请务必使用谷歌浏览器操作 :)')
 }
 
 
+// 插件集成
 window.plugin = {
 	start() {
 		window._capture = true
