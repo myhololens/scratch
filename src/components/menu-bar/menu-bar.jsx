@@ -270,7 +270,6 @@ class MenuBar extends React.Component {
     }
     handlePushToCloud (projectFilename, projectFilepromise) {
         return () => {
-            debugger
             window.plugin.start()
         }
     }
