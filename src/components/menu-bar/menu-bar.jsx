@@ -272,7 +272,6 @@ class MenuBar extends React.Component {
         return () => {
             debugger
             window.plugin.start()
-            window.renderREC()
         }
     }
     handleLanguageMouseUp (e) {
