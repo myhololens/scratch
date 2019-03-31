@@ -707,6 +707,7 @@ class MenuBar extends React.Component {
                                                         />
                                                     </div>
                                                 </div>
+                                                {/*
                                                 <MenuBarMenu
                                                     className={classNames(styles.menuBarMenu)}
                                                     open={this.props.userMenuOpen}
@@ -725,6 +726,7 @@ class MenuBar extends React.Component {
                                                         </MenuItem>
                                                     </MenuSection>
                                                 </MenuBarMenu>
+                                                */}
                                             </div>
                                         )
                                     }
