@@ -456,7 +456,11 @@ function renderREC() {
     var node = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
         node.style.position = 'relative'
     var el = document.createElement('div')
-        el.innerHTML = '<div class="rec-wrapper">REC</div>'
+        el.innerHTML = `
+			<div class="rec-wrapper">
+				REC
+			</div>
+		`
     node.insertBefore(el.children[0], node.children[0])
 }
 
