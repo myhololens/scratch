@@ -470,8 +470,8 @@ function renderREC() {
 
 // 移除 REC dom
 function destroyREC() {
-    var node = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
-		node.removeChild(node.children[0])
+    var parentNode = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
+        parentNode.removeChild(el.children[0])
 }
 
 
