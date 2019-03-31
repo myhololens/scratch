@@ -12,6 +12,7 @@ import Box from '../box/box.jsx';
 import Button from '../button/button.jsx';
 import CommunityButton from './community-button.jsx';
 import SaveButton from './save-button.jsx';
+import ShareButton from './share-button.jsx';
 import {ComingSoonTooltip} from '../coming-soon/coming-soon.jsx';
 import Divider from '../divider/divider.jsx';
 import LanguageSelector from '../../containers/language-selector.jsx';
