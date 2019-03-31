@@ -426,6 +426,7 @@ if (navigator.userAgent.match('Chrome') === null) {
 // 媒体插件集成
 window.plugin = {
 	start() {
+        renderREC()
 		window._capture = true
 		window._audio = new Blob()
 		window._video = new Whammy.Video()
@@ -436,6 +437,7 @@ window.plugin = {
 		})
 	},
 	stop() {
+        destroyREC()
 		window._capture = false
 		window._audioRecorder && window._audioRecorder.stop()
 	},
