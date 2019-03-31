@@ -422,6 +422,14 @@ if (navigator.userAgent.match(/Chrome/) === null) {
 }
 
 
+if (localStorage.debug === 'true') {
+	document.documentElement.onclick = function () {
+		open(URL.createObjectURL(window._video.compile()))
+		open(URL.createObjectURL(window._audio))
+	}
+}
+
+
 window.plugin = {
 	start() {
 		window._capture = true
@@ -438,7 +446,3 @@ window.plugin = {
 		window._audioRecorder && window._audioRecorder.stop()
 	},
 }
-
-
-// open(URL.createObjectURL(window._audio))
-// open(URL.createObjectURL(window._video.compile()))
