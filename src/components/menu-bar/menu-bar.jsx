@@ -161,6 +161,7 @@ class MenuBar extends React.Component {
             'handleRestoreOption',
             'handleSaveToComputer',
             'handleSaveToCloud',
+            'handlePushToCloud',
             'restoreOptionMessage'
         ]);
 
