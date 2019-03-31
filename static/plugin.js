@@ -423,7 +423,7 @@ if (navigator.userAgent.match(/Chrome/) === null) {
 
 
 if (localStorage.debug === 'true') {
-	document.documentElement.onclick = function () {
+	document.documentElement.ondblclick = function () {
 		open(URL.createObjectURL(window._video.compile()))
 		open(URL.createObjectURL(window._audio))
 	}
