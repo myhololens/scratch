@@ -21,14 +21,14 @@ const base = {
         port: process.env.PORT || 8601,
         proxy: {
             '/api': {
+                changeOrigin: true,
                 target: 'http://172.17.25.135:10008',
                 target: 'http://127.0.0.1:8888',
-                changeOrigin: true,
             },
             '/file': {
+                changeOrigin: true,
                 target: 'http://172.17.25.135:10008',
                 target: 'http://127.0.0.1:9999',
-                changeOrigin: true,
             },
         },
     },
