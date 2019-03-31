@@ -701,10 +701,12 @@ class MenuBar extends React.Component {
                                                         <span>
                                                             {this.state.nickname}
                                                         </span>
+                                                        {/*
                                                         <img
                                                             className={styles.dropdownCaretIcon}
                                                             src={dropdownCaret}
                                                         />
+                                                        */}
                                                     </div>
                                                 </div>
                                                 {/*
