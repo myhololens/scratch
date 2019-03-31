@@ -425,22 +425,22 @@ if (navigator.userAgent.match('Chrome') === null) {
 
 // 媒体插件集成
 window.plugin = {
-	start() {
+    start() {
         renderREC()
-		window._capture = true
-		window._audio = new Blob()
-		window._video = new Whammy.Video()
-		navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
-			window._audioRecorder = new MediaRecorder(stream)
-			window._audioRecorder.start()
-			window._audioRecorder.ondataavailable = e => window._audio = e.data
-		})
-	},
-	stop() {
+        window._capture = true
+        window._audio = new Blob()
+        window._video = new Whammy.Video()
+        navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+            window._audioRecorder = new MediaRecorder(stream)
+            window._audioRecorder.start()
+            window._audioRecorder.ondataavailable = e => window._audio = e.data
+        })
+    },
+    stop() {
         destroyREC()
-		window._capture = false
-		window._audioRecorder && window._audioRecorder.stop()
-	},
+        window._capture = false
+        window._audioRecorder && window._audioRecorder.stop()
+    },
 }
 
 
