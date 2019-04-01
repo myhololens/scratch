@@ -494,8 +494,7 @@ function renderVIEW() {
                 </div>
             </div>
         `
-    var parentNode = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
-        parentNode.style.position = 'relative'
+    var parentNode = document.querySelector('body')
         parentNode.insertBefore(el.children[0], parentNode.children[0])
 }
 
