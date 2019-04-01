@@ -75,13 +75,13 @@
     padding-bottom: 25px;
 }
 
-.view-wrapper .body video {
-    display: block;
+.view-wrapper .body audio {
+    display: none;
     width: 100%;
 }
 
-.view-wrapper .body audio {
-    display: none;
+.view-wrapper .body video {
+    display: block;
     width: 100%;
 }
 
