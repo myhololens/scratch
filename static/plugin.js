@@ -484,8 +484,8 @@ function renderVIEW() {
                 <div class="view-wrapper">
                     <div class="header">录制完成</div>
                     <div class="body">
-                        <audio class="view-audio" autoplay />
-                        <video class="view-video" autoplay poster="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif" />
+                        <audio autoplay></audio>
+                        <video autoplay poster="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif"></video>
                     </div>
                     <div class="footer">
                         <span>放弃</span>
