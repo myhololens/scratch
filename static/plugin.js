@@ -488,8 +488,8 @@ function renderALERT() {
                         <video autoplay poster="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif"></video>
                     </div>
                     <div class="footer">
-                        <span>放弃</span>
-                        <span>发布</span>
+                        <span onclick="destroyALERT()">放弃</span>
+                        <span onclick="destroyALERT()">发布</span>
                     </div>
                 </div>
             </div>
