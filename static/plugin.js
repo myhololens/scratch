@@ -489,7 +489,7 @@ function renderALERT() {
                     </div>
                     <div class="footer">
                         <span onclick="destroyALERT()">放弃</span>
-                        <span onclick="destroyALERT()">发布</span>
+                        <span onclick="destroyALERT(); plugin.push();">发布</span>
                     </div>
                 </div>
             </div>
