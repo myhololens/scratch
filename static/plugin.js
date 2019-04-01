@@ -480,8 +480,8 @@ function destroyREC() {
 function renderALERT() {
     var el = document.createElement('div')
         el.innerHTML = `
-            <div class="view-mask">
-                <div class="view-wrapper">
+            <div class="alert-mask">
+                <div class="alert-wrapper">
                     <div class="header">录制完成</div>
                     <div class="body">
                         <audio autoplay></audio>
