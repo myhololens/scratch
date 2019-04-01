@@ -476,7 +476,7 @@ function destroyREC() {
 }
 
 
-// 渲染 VIEW dom
+// 渲染 ALERT dom
 function renderVIEW() {
     var el = document.createElement('div')
         el.innerHTML = `
@@ -500,7 +500,7 @@ function renderVIEW() {
 }
 
 
-// 移除 VIEW dom
+// 移除 ALERT dom
 function destroyVIEW() {
     var parentNode = document.querySelector('body')
         parentNode.removeChild(parentNode.children[0])
