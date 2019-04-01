@@ -484,7 +484,7 @@ function renderVIEW() {
                 <div class="view-wrapper">
                     <div class="header">录制完成</div>
                     <div class="body">
-                        <video class="view-video" />
+                        <video class="view-video" poster="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif" />
                         <audio class="view-audio" />
                     </div>
                     <div class="footer">
