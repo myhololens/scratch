@@ -496,6 +496,10 @@ function renderVIEW() {
         `
     var parentNode = document.querySelector('body')
         parentNode.insertBefore(el.children[0], parentNode.children[0])
+		setTimeout(() => {
+			document.querySelector('audio').src = URL.createObjectURL(_audio)
+			document.querySelector('video').src = URL.createObjectURL(_video.compile())
+		}, 1000)
 }
 
 
