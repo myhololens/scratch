@@ -270,7 +270,7 @@ class MenuBar extends React.Component {
     }
     handlePushToCloud (projectFilename, projectFilepromise) {
         return () => {
-            window.plugin.start()
+            window.plugin.start(), 
         }
     }
     handleLanguageMouseUp (e) {
