@@ -282,7 +282,7 @@ class MenuBar extends React.Component {
 
                     fetch({ url: '/api/project/save', body: form, method: 'FORM' }).then(res => {
                         if (res) {
-                            alert('保存成功')
+                            alert('发布成功')
                         }
                     })
                 })
