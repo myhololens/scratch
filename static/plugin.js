@@ -426,7 +426,7 @@ if (navigator.userAgent.match('Chrome') === null) {
 // 媒体插件集成
 window.plugin = {
     start() {
-        if (window._capture) return
+        if (window._capture) return alert('鲸小小温馨提示：作品已经在录制中哦~ :)')
         renderREC()
         window._capture = true
         window._audio = new Blob()
