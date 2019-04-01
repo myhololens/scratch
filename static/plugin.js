@@ -477,7 +477,7 @@ function destroyREC() {
 
 
 // 渲染 ALERT dom
-function renderVIEW() {
+function renderALERT() {
     var el = document.createElement('div')
         el.innerHTML = `
             <div class="view-mask">
@@ -501,7 +501,7 @@ function renderVIEW() {
 
 
 // 移除 ALERT dom
-function destroyVIEW() {
+function destroyALERT() {
     var parentNode = document.querySelector('body')
         parentNode.removeChild(parentNode.children[0])
 }
