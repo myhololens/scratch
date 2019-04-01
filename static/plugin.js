@@ -484,8 +484,8 @@ function renderVIEW() {
                 <div class="view-wrapper">
                     <div class="header">录制完成</div>
                     <div class="body">
-                        <video class="body-video" src="https://mv01.jiaoliuqu.com/o_1d44evdr4ibp1sbugc53011pfia.mp4" />
-                        <audio class="body-audio" src="https://mv01.jiaoliuqu.com/o_1d44evdr4ibp1sbugc53011pfia.mp4" />
+                        <video class="view-video" />
+                        <audio class="view-audio" />
                     </div>
                     <div class="footer">
                         <span>放弃</span>
