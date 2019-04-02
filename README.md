@@ -1,2 +1,5 @@
-a. cnpm i
-b. cnpm start
+> 1. cnpm i
+> 2. cnpm start
+
+---
+
