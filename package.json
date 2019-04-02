@@ -26,7 +26,9 @@
     "url": "git+ssh://git@github.com/LLK/scratch-gui.git"
   },
   "peerDependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "npm-run-path": "^3.0.0"
+  },
   "dependencies": {},
   "jest": {
     "setupFiles": [
