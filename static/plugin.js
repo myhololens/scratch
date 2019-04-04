@@ -454,7 +454,7 @@ document.documentElement.ondblclick = function () {
 }
 
 
-// 渲染 REC dom
+// 渲染 dom rec
 function renderREC() {
     var el = document.createElement('div')
         el.innerHTML = `
@@ -468,7 +468,7 @@ function renderREC() {
 }
 
 
-// 移除 REC dom
+// 移除 dom rec
 function destroyREC() {
     var parentNode = document.querySelector('.stage-wrapper_stage-canvas-wrapper_3ewmd')
         parentNode.style = ''
@@ -476,7 +476,7 @@ function destroyREC() {
 }
 
 
-// 渲染 ALERT dom
+// 渲染 dom alert
 function renderALERT() {
     var el = document.createElement('div')
         el.innerHTML = `
@@ -500,7 +500,7 @@ function renderALERT() {
 }
 
 
-// 移除 ALERT dom
+// 移除 dom alert
 function destroyALERT() {
     var parentNode = document.querySelector('body')
         parentNode.removeChild(parentNode.children[0])
