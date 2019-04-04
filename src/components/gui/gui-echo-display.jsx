@@ -73,7 +73,7 @@ class GUIEchoDisplay extends React.Component {
 
         if (this.props.loadingState === 'SHOWING_WITHOUT_ID' && prevProps.loadingState === 'LOADING_VM_NEW_DEFAULT') {
             if (qs.search['id']) {
-                fetch({ url: '/api/project/get', body: qs.search }).then(res => {
+                fetch({ url: '/api/project/pull', body: qs.search }).then(res => {
                     if (res) {
                         fetch({ url: res.url_sb3, resp: 'blob', method: 'GET' }).then(sb3 => {
                             this.handleChange({
