@@ -276,9 +276,9 @@ class MenuBar extends React.Component {
                     let form = new FormData()
                         form.append('name', projectFilename)
                         form.append('sb3', sb3)
+                        form.append('poster', window._poster)
                         form.append('audio',  window._audio)
                         form.append('video',  window._video.compile())
-                        form.append('poster', window._video.poster)
 
                     if (qs.search['id']) {
                         form.append('id', qs.search['id'])
