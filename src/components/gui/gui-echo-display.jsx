@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import {fetch, qs} from '../../utils';
 
+import analytics from '../../lib/analytics';
 import log from '../../lib/log';
 import sharedMessages from '../../lib/shared-messages';
 
@@ -71,7 +72,7 @@ class GUIEchoDisplay extends React.Component {
             this.reader.readAsArrayBuffer(this.fileToUpload);
         }
 
-        if (this.props.loadingState === 'SHOWING_WITHOUT_ID' && prevProps.loadingState === 'LOADING_VM_NEW_DEFAULT') {
+        if (prevProps.loadingState === 'LOADING_VM_NEW_DEFAULT' && this.props.loadingState === 'SHOWING_WITHOUT_ID') {
             if (qs.search['id']) {
                 fetch({ url: '/api/project/pull', body: qs.search }).then(res => {
                     if (res) {
@@ -135,6 +136,11 @@ class GUIEchoDisplay extends React.Component {
             const filename = this.fileToUpload && this.fileToUpload.name;
             this.props.vm.loadProject(this.reader.result)
                 .then(() => {
+                    analytics.event({
+                        category: 'project',
+                        action: 'Import Project File',
+                        nonInteraction: true
+                    });
                     // Remove the hash if any (without triggering a hash change event or a reload)
                     try { // Can fail e.g. when GUI is loaded from static file (integration tests)
                         // history.replaceState({}, document.title, '.');

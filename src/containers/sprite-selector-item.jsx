@@ -140,7 +140,7 @@ SpriteSelectorItem.propTypes = {
     asset: PropTypes.instanceOf(storage.Asset),
     costumeURL: PropTypes.string,
     dispatchSetHoveredSprite: PropTypes.func.isRequired,
-    dragPayload: PropTypes.any,
+    dragPayload: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     dragType: PropTypes.string,
     dragging: PropTypes.bool,
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

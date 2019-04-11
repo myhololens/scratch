@@ -4,6 +4,7 @@ import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import VM from 'scratch-vm';
 
+import analytics from '../lib/analytics';
 import costumeLibraryContent from '../lib/libraries/costumes.json';
 import spriteTags from '../lib/libraries/sprite-tags';
 import LibraryComponent from '../components/library/library.jsx';
@@ -37,6 +38,11 @@ class CostumeLibrary extends React.PureComponent {
             skinId: null
         };
         this.props.vm.addCostumeFromLibrary(item.md5, vmCostume);
+        analytics.event({
+            category: 'library',
+            action: 'Select Costume',
+            label: item.name
+        });
     }
     render () {
         return (

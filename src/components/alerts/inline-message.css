@@ -5,7 +5,7 @@
     color: $ui-white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     align-items: center;
     font-size: .8125rem;
 }

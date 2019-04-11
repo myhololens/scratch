@@ -1,6 +1,4 @@
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import React from 'react';
 
 import {
     activateDeck,
@@ -17,29 +15,6 @@ import {
 } from '../reducers/modals';
 
 import CardsComponent from '../components/cards/cards.jsx';
-import {loadImageData} from '../lib/libraries/decks/translate-image.js';
-
-class Cards extends React.Component {
-    componentDidMount () {
-        if (this.props.locale !== 'en') {
-            loadImageData(this.props.locale);
-        }
-    }
-    componentDidUpdate (prevProps) {
-        if (this.props.locale !== prevProps.locale) {
-            loadImageData(this.props.locale);
-        }
-    }
-    render () {
-        return (
-            <CardsComponent {...this.props} />
-        );
-    }
-}
-
-Cards.propTypes = {
-    locale: PropTypes.string.isRequired
-};
 
 const mapStateToProps = state => ({
     visible: state.scratchGui.cards.visible,
@@ -70,4 +45,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Cards);
+)(CardsComponent);

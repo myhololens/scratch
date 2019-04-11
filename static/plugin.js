@@ -505,3 +505,20 @@ function destroyALERT() {
     var parentNode = document.querySelector('body')
         parentNode.removeChild(parentNode.children[0])
 }
+
+
+/*
+this._drawThese(this._drawList, ShaderManager.DRAW_MODE.default, this._projection);
+
+// 媒体插件集成
+if (window) {
+	window._poster = gl.canvas.toDataURL('image/webp');
+}
+
+// 媒体插件集成
+if (window._capture) {
+	window._video.add(gl.canvas);
+	window._video.poster = gl.canvas.toDataURL('image/webp');
+}
+
+*/

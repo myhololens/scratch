@@ -12,7 +12,6 @@ import helpIcon from '../../lib/assets/icon--tutorials.svg';
 import closeIcon from './icon--close.svg';
 
 import {translateVideo} from '../../lib/libraries/decks/translate-video.js';
-import {translateImage} from '../../lib/libraries/decks/translate-image.js';
 
 const CardHeader = ({onCloseCards, onShowAll, totalSteps, step}) => (
     <div className={styles.headerButtons}>
@@ -276,7 +275,7 @@ const Cards = props => {
                                 />
                             ) : (
                                 <ImageStep
-                                    image={translateImage(steps[step].image, locale)}
+                                    image={steps[step].image}
                                     title={steps[step].title}
                                 />
                             )

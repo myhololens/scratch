@@ -4,6 +4,7 @@ import React from 'react';
 import {injectIntl, intlShape, defineMessages} from 'react-intl';
 import VM from 'scratch-vm';
 
+import analytics from '../lib/analytics';
 import spriteLibraryContent from '../lib/libraries/sprites.json';
 import randomizeSpritePosition from '../lib/randomize-sprite-position';
 import spriteTags from '../lib/libraries/sprite-tags';
@@ -30,6 +31,11 @@ class SpriteLibrary extends React.PureComponent {
         randomizeSpritePosition(item);
         this.props.vm.addSprite(JSON.stringify(item.json)).then(() => {
             this.props.onActivateBlocksTab();
+        });
+        analytics.event({
+            category: 'library',
+            action: 'Select Sprite',
+            label: item.name
         });
     }
     render () {

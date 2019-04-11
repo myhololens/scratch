@@ -35,8 +35,7 @@ const base = {
     },
     output: {
         library: 'GUI',
-        filename: '[name].js',
-        chunkFilename: 'chunks/[name].js'
+        filename: '[name].js'
     },
     externals: {
         React: 'react',
@@ -49,11 +48,7 @@ const base = {
         rules: [{
             test: /\.jsx?$/,
             loader: 'babel-loader',
-            include: [
-                path.resolve(__dirname, 'src'),
-                /node_modules[\\/]scratch-[^\\/]+[\\/]src/,
-                /node_modules[\\/]pify/
-            ],
+            include: [path.resolve(__dirname, 'src'), /node_modules[\\/]scratch-[^\\/]+[\\/]src/],
             options: {
                 // Explicitly disable babelrc so we don't catch various config
                 // in much lower dependencies.
@@ -207,8 +202,7 @@ module.exports = [
             },
             output: {
                 libraryTarget: 'umd',
-                path: path.resolve('dist'),
-                publicPath: '/static/'
+                path: path.resolve('dist')
             },
             externals: {
                 React: 'react',
