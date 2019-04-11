@@ -23,15 +23,15 @@
 
 .rec-wrapper img {
     width: 22px;
-    margin: 0 0 0 4px;
+    margin: 0 0 0 8px;
     transform: translateY(1px);
 }
 
 .rec-wrapper::before {
     content: "";
-    width: 10px;
-    height: 10px;
-    margin-right: 8px;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
     background: red;
     border-radius: 50%;
     box-shadow: 0 0 5px red;
