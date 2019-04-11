@@ -160,10 +160,10 @@ class MenuBar extends React.Component {
             'handlePushToCloud',
             'restoreOptionMessage'
         ]);
-
-        this.state = {
-            nickname: localStorage['nickname'],
-        };
+        Object.assign(
+            this,
+            localStorage,
+        );
     }
     componentDidMount () {
         document.addEventListener('keydown', this.handleKeyPress);
@@ -479,7 +479,7 @@ class MenuBar extends React.Component {
                         </div>
                     </div>
                     {
-                        this.state.nickname
+                        this.nickname
                         &&
                         <React.Fragment>
                             <Divider className={classNames(styles.divider)} />
@@ -504,8 +504,8 @@ class MenuBar extends React.Component {
                 </div>
                 <div className={styles.accountInfoGroup}>
                     {
-                        this.state.nickname
-                        &&
+                        this.nickname
+                        ?
                         <div style={{ cursor: 'pointer' }} className={classNames(styles.menuBarItem)} onMouseUp={this.props.onClickUser}>
                             <div className={classNames(styles.editMenu)}>
                                 <div className={classNames(styles.menuBarItem, styles.hoverable, styles.accountNavMenu)}>
@@ -514,7 +514,7 @@ class MenuBar extends React.Component {
                                         src={profileIcon}
                                     />
                                     <span>
-                                        { this.state.nickname }
+                                        { this.nickname }
                                     </span>
                                     <img
                                         className={styles.dropdownCaretIcon}
@@ -540,6 +540,10 @@ class MenuBar extends React.Component {
                                     </MenuItem>
                                 </MenuSection>
                             </MenuBarMenu>
+                        </div>
+                        :
+                        <div className={classNames(styles.menuBarItem, styles.hoverable)} onClick={jump.fadeSigninPassword}>
+                            登录
                         </div>
                     }
                 </div>

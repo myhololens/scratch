@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><%= htmlWebpackPlugin.options.title %></title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="google" value="notranslate">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="static/favicon.ico">
-<link rel="stylesheet" href="static/plugin.css">
-<script src="static/plugin.js"></script>
-<% if (htmlWebpackPlugin.options.sentryConfig) { %>
-    <!-- Sentry error logging to help with finding bugs -->
-    <script src="https://cdn.ravenjs.com/3.22.1/raven.min.js" crossorigin="anonymous"></script>
-    <script>Raven.config(<%= htmlWebpackPlugin.options.sentryConfig %>).install()</script>
-    <!-- /Sentry -->
-<% } %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//alertifyjs.com/build/css/themes/default.css">
+    <link rel="stylesheet" href="//alertifyjs.com/build/css/alertify.css">
+    <link rel="stylesheet" href="//kids.abakus.cn/style/login.css">
+    <link rel="stylesheet" href="static/plugin.css">
+    <link rel="icon" href="static/favicon.ico">
 </head>
 <body>
+    <script src="//kids.abakus.cn/script/login.js"></script>
+    <script src="static/plugin.js"></script>
 </body>
-</html>
